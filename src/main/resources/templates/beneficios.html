@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <h1>Agenda</h1>
+      <img src="../static/images/progresar.jpg" alt="progresar" title="progresar">
+    </header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="agenda.html">Agenda</a></li>
+        <li><a href="beneficios.html">Beneficios y Becas</a></li>
+        <li><a href="contacto.html">Contáctanos</a></li>
+      </ul>
+    </nav>
+    <section>
+			<table>
+				<tr>
+					<th>Codigo</th>
+					<th>Curos</th>
+					<th>Fecha apertura</th>
+					<th>Fecha cierre</th>
+				</tr>
+				<tr  th:each="b: ${becas}">
+						<td th:text="${b.codigo}"></td>
+						<td th:text="${b.curso.titulo}"></td>
+						<td th:text="${b.fechaApertura}"></td>
+						<td th:text="${b.fechaCierre}"></td>
+				</tr>
+			</table>
+    </section>
+    <footer>
+      <p>
+        2022. Portal de Capacitación – Av. Gral. Manuel Belgrano 789 – Teléfono
+        (388) 999999 S. S. de Jujuy República Argentina.
+      </p>
+    </footer>
+  </body>
+</html>
