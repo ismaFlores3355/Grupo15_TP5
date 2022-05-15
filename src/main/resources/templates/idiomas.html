@@ -7,17 +7,7 @@
     <title>Document</title>
   </head>
 <body>
-	<header>
-		<h1>Idiomas</h1>
-	</header>
-	<nav>
-		<ul>
-			<li><a href="index.html">Inicio</a></li>
-			<li><a href="agenda.html">Agenda</a></li>
-			<li><a href="beneficios.html">Beneficios y Becas</a></li>
-			<li><a href="contacto.html">Contáctanos</a></li>
-		</ul>
-	</nav>
+	<header th:insert="/layouts/header::header"> </header>
 	<section>
 		<sub>Lorem Ipsum is simply dummy text of the printing and typesetting
         industry</sub>
@@ -45,5 +35,6 @@
         	</tr>
         </table>
 	</section>
+	<footer th:insert="/layouts/footer::footer"> </footer><br>
 </body>
 </html>

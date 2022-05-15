@@ -5,25 +5,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-<header>
-<h1>Contacto</h1>
+<header th:insert="/layouts/header::header"> </header>
 <img  title="contactoo" src="../static/images/conta.jpg"
  alt="imagen contactoo" width="320" height="240" >
-
-
-</header>
-
-<nav>
-  <ul>
-       <li><a href="index.html">Inicio</a></li>
-            <li><a href="agenda.html">Agenda</a></li>
-            <li><a href="beneficio.html">Beneficios y Becas</a></li>
-            <li><a href="contacto.html">Contactanos</a></li>
-  
-  
-  </ul>
-</nav>
-
 <section>
  <h1>REGISTRO DE INSCRIPCION</h1>
   <form action="http://www.fi.unju.edu.ar" method="post">
@@ -95,11 +79,7 @@
  
 </section>
 
-<footer>
-<p>2022. Portal de Capacitación – Av. Gral. Manuel Belgrano 789 – Teléfono (388) 999999 S. S. de Jujuy República
-Argentina  </p>
-</footer>
-
+<footer th:insert="/layouts/footer::footer"> </footer><br>
 
 </body>
 </html>
