@@ -7,18 +7,8 @@
     <title>Document</title>
   </head>
   <body>
-    <header>
-      <h1>Agenda</h1>
+      <header th:insert="/layouts/header::header"> </header>
       <img src="../static/images/progresar.jpg" alt="progresar" title="progresar">
-    </header>
-    <nav>
-      <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="agenda.html">Agenda</a></li>
-        <li><a href="beneficios.html">Beneficios y Becas</a></li>
-        <li><a href="contacto.html">Contáctanos</a></li>
-      </ul>
-    </nav>
     <section>
 			<table>
 				<tr>
@@ -35,11 +25,6 @@
 				</tr>
 			</table>
     </section>
-    <footer>
-      <p>
-        2022. Portal de Capacitación – Av. Gral. Manuel Belgrano 789 – Teléfono
-        (388) 999999 S. S. de Jujuy República Argentina.
-      </p>
-    </footer>
+    <footer th:insert="/layouts/footer::footer"> </footer><br>
   </body>
 </html>
