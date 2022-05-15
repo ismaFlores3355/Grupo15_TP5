@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
   <head>
+  <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
+   <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"/>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,10 +12,10 @@
       <header th:insert="/layouts/header::header"> </header>
       <img src="../static/images/progresar.jpg" alt="progresar" title="progresar">
     <section>
-			<table>
-				<tr>
+			<table class="table table-bordered">
+				<tr class="table-info">
 					<th>Codigo</th>
-					<th>Curos</th>
+					<th>Cursos</th>
 					<th>Fecha apertura</th>
 					<th>Fecha cierre</th>
 				</tr>
@@ -26,5 +28,13 @@
 			</table>
     </section>
     <footer th:insert="/layouts/footer::footer"> </footer><br>
+  
+  
+  
+   <script src="/webjars/jquery/jquery.min.js" type="text/javascript"></script>
+<script src="/webjars/popper.js/umd/popper.min.js" type="text/javascript"></script>
+<script src="/webjars/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+  
+  
   </body>
 </html>
