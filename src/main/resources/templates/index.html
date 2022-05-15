@@ -1,24 +1,23 @@
  <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
   <body>
     <header th:insert="/layouts/header::header"> </header>
       <img src="../static/images/logo.jpg" alt="logo" title="Logo">
-    <br>
     <section>
       <h2>Cursos con inscripción abierta</h2>
-      <ol>
+        <ol>
           <li><a href="idiomas.html">Idiomas</a></li>
           <li><a href="">Diseño</a></li>
           <li><a href="">Desarrollo</a></li>
           <li><a href="">Marketing</a></li>
           <li><a href="">Conferencias</a></li>
-      </ol> 
+       </ol> 
     </section>
     <footer th:insert="/layouts/footer::footer"> </footer><br>
   </body>
