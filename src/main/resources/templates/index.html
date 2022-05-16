@@ -8,21 +8,18 @@
   <title>Document</title>
 </head>
   <body>
-    <header th:insert="/layouts/header::header"> </header>
+    <header th:replace="/layouts/header::header"></header>
       <img src="../static/images/logo.jpg" alt="logo" title="Logo">
     <section>
       <h2>Cursos con inscripción abierta</h2>
-        <ol>
-          <li><a th:href="@{/idiomas}">Idiomas</a></li>
-          <li><a href="">Diseño</a></li>
-          <li><a href="">Desarrollo</a></li>
-          <li><a href="">Marketing</a></li>
-          <li><a href="">Conferencias</a></li>
-       </ol> 
+
     </section>
-    <footer th:insert="/layouts/footer::footer"> </footer><br>
+       
+    <footer th:replace="/layouts/footer::footer"></footer>
+    
+    
   <script src="/webjars/jquery/jquery.min.js" type="text/javascript"></script>
-<script src="/webjars/popper.js/umd/popper.min.js" type="text/javascript"></script>
-<script src="/webjars/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+  <script src="/webjars/popper.js/umd/popper.min.js" type="text/javascript"></script>
+  <script src="/webjars/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
   </body>
 </html>
