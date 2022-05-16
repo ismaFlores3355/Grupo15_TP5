@@ -25,13 +25,9 @@ h3{
 	
 }
 
-.navbar-text{
-	text-align:center;    /*Anileacion del texto respecto del ancho de la caja */
-	font-weight:bold;	  /*Formato del texto */
-}
 
-.navbar-brand{
-    text-align:center;    /*Anileacion del texto respecto del ancho de la caja */
-	font-weight:bold;	  /*Formato del texto */	
+.container-footer{
+	position:absolute;
+	bottom:0;
+	width:100%
 }
-

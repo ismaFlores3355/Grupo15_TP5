@@ -2,35 +2,42 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
   <head>
    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
-  <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"/>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Insert title here</title>
+   <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"/>
+   <meta charset="UTF-8" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title></title>
   </head>
-  <body>
-  
-  
-  
-  
-  <footer th:fragment="footer">
-	
-   <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
-  <div class="container-fluid">
-    <span class="navbar-text">
-    
-     2022. Portal de Capacitación – Av. Gral. Manuel Belgrano 789 – Teléfono
-        (388) 999999 S. S. de Jujuy República Argentina.
-     
-    </span>
-  </div>
-</nav>
-   
-   </footer>
+  <body> 
+  	<footer class="bg-dark text-white py-4 container-footer" th:fragment="footer">
+	  <div class="container">
+		<nav class="row">
+			<!-- Logo -->
+			<!-- Menu -->
+			<ul class="col-3 list-unstyled">
+				<li class="font-weight-bold text-uppercase">Educacion</li>	
+				<li><a th:href="@{/idiomas}" class="text-reset">Idiomas</a></li>
+				<li><a href="#" class="text-reset">Desarrollo</a></li>
+				<li><a href="#" class="text-reset">Diseño</a></li>
+			</ul>
+			<ul class="col-3 list-unstyled">
+				<li class="font-weight-bold text-uppercase">Equipo</li>	
+				<li><a href="#" class="text-reset">Instructores</a></li>
+				<li><a href="#" class="text-reset">Invitados</a></li>
+			</ul>
+				<ul class="col-3 list-unstyled">
+				<li class="font-weight-bold text-uppercase">Redes</li>	
+				<li><a href="https://www.facebook.com/" class="text-reset">Facebook</a></li>
+				<li><a href="https://twitter.com/" class="text-reset">Twitter</a></li>
+				<li><a href="https://www.instagram.com/" class="text-reset">Instagram</a></li>
+				<li><a href="https://www.fi.unju.edu.ar/" class="text-reset">Universidad</a></li>
+			</ul>
+		</nav>
+	  </div> 
+    </footer>
    
    <script src="/webjars/jquery/jquery.min.js" type="text/javascript"></script>
-<script src="/webjars/popper.js/umd/popper.min.js" type="text/javascript"></script>
-<script src="/webjars/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
-   
+   <script src="/webjars/popper.js/umd/popper.min.js" type="text/javascript"></script>
+   <script src="/webjars/bootstrap/js/bootstrap.min.js" type="text/javascript"></script> 
   </body>
 </html>
