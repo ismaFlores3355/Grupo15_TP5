@@ -6,12 +6,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Beneficios y Becas</title>
   </head>
   <body>
-      <header th:insert="/layouts/header::header"> </header>
+      <header th:replace="/layouts/header::header"> </header>
       <img src="../static/images/progresar.jpg" alt="progresar" title="progresar">
-    <section>
+   	  <section>
 			<table class="table table-bordered">
 				<tr class="table-info">
 					<th>Codigo</th>
@@ -20,21 +20,18 @@
 					<th>Fecha cierre</th>
 				</tr>
 				<tr  th:each="b: ${becas}">
-						<td th:text="${b.codigo}"></td>
-						<td th:text="${b.curso.titulo}"></td>
-						<td th:text="${b.fechaApertura}"></td>
-						<td th:text="${b.fechaCierre}"></td>
+					<td th:text="${b.codigo}"></td>
+					<td th:text="${b.curso.titulo}"></td>
+					<td th:text="${b.fechaApertura}"></td>
+					<td th:text="${b.fechaCierre}"></td>
 				</tr>
 			</table>
-    </section>
-    <footer th:insert="/layouts/footer::footer"> </footer><br>
-  
-  
+     </section>
+    <footer th:replace="/layouts/footer::footer"></footer><br>
   
    <script src="/webjars/jquery/jquery.min.js" type="text/javascript"></script>
-<script src="/webjars/popper.js/umd/popper.min.js" type="text/javascript"></script>
-<script src="/webjars/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+   <script src="/webjars/popper.js/umd/popper.min.js" type="text/javascript"></script>
+   <script src="/webjars/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
   
-  
-  </body>
+</body>
 </html>
