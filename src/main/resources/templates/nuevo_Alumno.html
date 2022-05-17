@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
+<link rel="stylesheet" type="text/css"
+	th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" />
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agregar Alumno</title>
+</head>
+<body>
+	<header th:replace="/layouts/header::header"></header>
+	<section class="d-flex justify-content-center">
+		<div class="card col-sm-4 p-4">
+			<div class="mb-4">
+				<h3 class="text-primary">Alta de Alumno</h3>
+			</div>
+			<div class="mb-3">
+				<form th:action="@{/Alumno/guardar}" method="POST" th:object="${alumno}">
+
+					<div class="col-md-10">
+						<label for="inputAddress">Apellidos</label> <input th:field="*{apellido}" type="text"
+							class="form-control" id="inputApellido"
+							placeholder="Ingrese apellidos">
+					</div>
+					<div class="col-md-10">
+						<label for="inputAddress">Nombres</label> <input th:field="*{nombre}" type="text"
+							class="form-control" id="inputNombre"
+							placeholder="Ingrese nombres">
+					</div>
+					<div class="col-md-10">
+						<label for="inputNombre">D.N.I</label> <input th:field="*{dni}" type="number"
+							class="form-control" id="inputDNI" placeholder="Ingrese D.N.I">
+					</div>
+					<div class="col-md-10">
+						<label for="inputEmail">E-mail</label> <input th:field="*{email}" type="email"
+							class="form-control" id="inputEmail4"
+							placeholder="Ingrese E-mail">
+					</div>
+					<div class="col-md-10">
+						<label for="inputTelefono">Telefono</label> <input th:field="*{telefono}" type="number"
+							class="form-control" id="inputTelefono">
+					</div>
+					<br>
+					<div class="d-grid gap-2 d-md-flex justify-content-md-start">
+						<button class="btn btn-success" type="submit">Enviar</button>
+						<a th:href="@{/inicio}" id="cancel" class="btn btn-danger">Cancelar</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</section>
+	<footer th:replace="/layouts/footer::footer"></footer>
+	<script src="/webjars/jquery/jquery.min.js" type="text/javascript"></script>
+	<script src="/webjars/popper.js/umd/popper.min.js"
+		type="text/javascript"></script>
+	<script src="/webjars/bootstrap/js/bootstrap.min.js"
+		type="text/javascript"></script>
+</body>
+</html>
