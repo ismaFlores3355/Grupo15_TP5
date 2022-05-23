@@ -21,26 +21,31 @@
                     <div class="col-md-10">
 						<label for="inputNombre">Legajo</label> <input th:field="*{legajo}" type="number"
 							class="form-control" id="inputDNI" placeholder="Ingrese D.N.I">
+						<div class="text-danger" th:if="${#fields.hasErrors('legajo')}" th:errors="*{legajo}"></div>	
 					</div>
 					<div class="col-md-10">
 						<label for="inputAddress">Nombres</label> <input th:field="*{nombre}" type="text"
 							class="form-control" id="inputNombre"
 							placeholder="Ingrese nombres">
+							<div class="text-danger" th:if="${#fields.hasErrors('nombre')}" th:errors="*{nombre}"></div>
 					</div>
 					<div class="col-md-10">
 						<label for="inputAddress">Apellidos</label> <input th:field="*{apellido}" type="text"
 							class="form-control" id="inputApellido"
 							placeholder="Ingrese apellidos">
+							<div class="text-danger" th:if="${#fields.hasErrors('apellido')}" th:errors="*{apellido}"></div>
 					</div>
 					
 					<div class="col-md-10">
 						<label for="inputEmail">E-mail</label> <input th:field="*{email}" type="email"
 							class="form-control" id="inputEmail4"
 							placeholder="Ingrese E-mail">
+							<div class="text-danger" th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></div>
 					</div>
 					<div class="col-md-10">
 						<label for="inputTelefono">Telefono</label> <input th:field="*{telefono}" type="number"
 							class="form-control" id="inputTelefono">
+							<div class="text-danger" th:if="${#fields.hasErrors('telefono')}" th:errors="*{telefono}"></div>
 					</div>
 					<br>
 					<div class="d-grid gap-2 d-md-flex justify-content-md-start">
