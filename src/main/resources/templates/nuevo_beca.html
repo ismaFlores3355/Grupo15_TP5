@@ -14,33 +14,29 @@
 	<section class="d-flex justify-content-center">
 		<div class="card col-sm-4 p-4">
 			<div class="mb-4">
-				<h3 class="text-primary">Alta de Becas</h3>
+				<h3 class="text-primary">Alta de Beca</h3>
 			</div>
 			<div class="mb-3">
-				<form th:action="@{Becas/guardar}" method="POST" th:object="${beca}">
+				<form th:action="@{/Beca/guardar}" method="POST" th:object="${beca}">
 
 					<div class="col-md-10">
-						<label for="inputAddress">Apellidos</label> <input th:field="*{apellido}" type="text"
-							class="form-control" id="inputApellido"
-							placeholder="Ingrese apellidos">
+						<label for="inputAddress">Codigo</label> <input th:field="*{codigo}" type="number"
+							class="form-control" id="inputCodigo"
+							placeholder="Ingrese Codigo">
 					</div>
 					<div class="col-md-10">
-						<label for="inputAddress">Nombres</label> <input th:field="*{nombre}" type="text"
-							class="form-control" id="inputNombre"
-							placeholder="Ingrese nombres">
+						<label for="inputAddress">Titulo</label> <input th:field="*{curso.titulo}" type="text"
+							class="form-control" id="inputTitulo"
+							placeholder="Ingrese Titulo">
 					</div>
 					<div class="col-md-10">
-						<label for="inputNombre">D.N.I</label> <input th:field="*{dni}" type="number"
-							class="form-control" id="inputDNI" placeholder="Ingrese D.N.I">
+						<label for="inputNombre">Fecha Apertura</label> <input th:field="*{fechaApertura}" th:value="*{fechaApertura}"type="date"
+							class="form-control" id="inputFechaApertura" placeholder="Ingrese Fecha Apertura">
 					</div>
 					<div class="col-md-10">
-						<label for="inputEmail">E-mail</label> <input th:field="*{email}" type="email"
-							class="form-control" id="inputEmail4"
-							placeholder="Ingrese E-mail">
-					</div>
-					<div class="col-md-10">
-						<label for="inputTelefono">Telefono</label> <input th:field="*{telefono}" type="number"
-							class="form-control" id="inputTelefono">
+						<label for="inputEmail">Fecha Cierre</label> <input th:field="*{fechaCierre}" th:value="*{fechaCierre}" type="date"
+							class="form-control" id="inputFechaCiere"
+							placeholder="Ingrese Fecha Cierre">
 					</div>
 					<br>
 					<div class="d-grid gap-2 d-md-flex justify-content-md-start">
