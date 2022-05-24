@@ -14,26 +14,32 @@ import ar.edu.unju.fi.model.Becas;
 import ar.edu.unju.fi.util.ListaBeca;
 
 @Controller
-@RequestMapping("/Becas")
+@RequestMapping("/Beca")
 public class BecasController {
+	
 	private static final Log LOGGER = LogFactory.getLog(BecasController.class);
+	ListaBeca listaBecas = new ListaBeca();
 	
 	@GetMapping("/nuevo")
 	public String getBecas(Model model) {
 		model.addAttribute("beca", new Becas());
-		return "nuevo_beneficiario";
+		return "nuevo_beca";
 	}
 
-	@PostMapping("/guardar") //se guarda la info
+	@PostMapping("/guardar")
 	public ModelAndView getListaBecasPage(@ModelAttribute("beca")Becas beca) {
-		ModelAndView mav = new ModelAndView("lista_becas");
-		//creo un objeto de la clase Lista Becas, donde esta el arrayList
-		ListaBeca listaBecas = new ListaBeca();
-		//recupero el arrayList y agrego un objeto becas a lista
+		ModelAndView mav = new ModelAndView("lista_Beca");
 		if(listaBecas.getBecas().add(beca)) {
-			LOGGER.info("Se agrego un objeto al arrayList de Alumnos");
+			LOGGER.info("Se agrego un objeto al arrayList de Becas");
 		}
-		mav.addObject("beca",listaBecas.getBecas());
+		mav.addObject("becas",listaBecas.getBecas());
+		return mav;
+	}
+
+	@GetMapping("/listaBeca")
+	public ModelAndView getListaBecaPage() {
+		ModelAndView mav = new ModelAndView("lista_Beca");
+		mav.addObject("becas", listaBecas.getBecas());
 		return mav;
 	}
 }
