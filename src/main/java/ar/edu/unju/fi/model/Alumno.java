@@ -6,6 +6,9 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Alumno {
 	@Min(value=1_000_000,message="El DNI debe ser mayor o igual a 1.000.000")
 	private int dni;
@@ -13,14 +16,11 @@ public class Alumno {
 	@Size(min=3,max=100,message="El nombre debe tener entre 3 a 100 caracteres")
 	@NotEmpty(message="El nombre del alumno no puede estar vacio")
 	private String nombre;
-	
-	@Size(min=3,max=50,message="El apellido debe tener entre 3 a 50 caracteres")
-	@NotEmpty(message="El apellido del alumno no puede estar vacio")
+
 	@NotBlank(message="El apellido del alumno no puede ser blanco")
 	private String apellido;
 	
-	@NotEmpty(message="El correo no puede estar vacio")
-	@Email(message="El correo debe contener @")
+	@NotEmpty @Email
 	private String email;
 	
 	@NotEmpty(message="El telefono no puede estar vacio")
