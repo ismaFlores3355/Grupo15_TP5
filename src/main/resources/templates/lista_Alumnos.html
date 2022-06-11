@@ -11,7 +11,7 @@
 <body>
 
 	<header th:replace="/layouts/header::header"></header>
-		<h3 class="text-info">Lista Alumnos</h3>
+		<h3 class="text-info">Plantel Alumnos</h3>
 		<section class="d-flex justify-content-center">
 		<div class="card col-sm-8 p-4">
 			<div class="d-md-flex justify-content-md-end">
@@ -39,8 +39,8 @@
         				<td th:text="${alumno.email}"></td>
         				<td th:text="${alumno.telefono}"></td>
         				<td >
-        				<a href="#" id="editarAlumno" class="btn btn-success">Editar</a>
-        				<a href="#" id="eliminarAlumno" class="btn btn-danger">Eliminar</a>
+        				<a th:href="@{/Alumno/editar/}+${alumno.dni}" id="editarAlumno" class="btn btn-success">Editar</a>
+        				<a th:href="@{/Alumno/eliminar/}+${alumno.dni}" id="eliminarAlumno" class="btn btn-danger">Eliminar</a>
         				</td>
         			</tr>
         		</tbody>	

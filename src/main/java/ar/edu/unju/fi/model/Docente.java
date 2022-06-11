@@ -6,9 +6,12 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Docente {
 
-	@Min(value=1000, message="El legajo debe ser mayor o igual a 1000")
+	@Min(value=100, message="El legajo debe ser mayor o igual a 100")
 	private int legajo;
 	
 	@Size(min=3, max=100, message="El nombre debe tener entre 3 a 100 caracteres")
