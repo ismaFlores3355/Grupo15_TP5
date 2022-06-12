@@ -5,14 +5,24 @@ import java.time.LocalDate;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.stereotype.Component;
 
+
+import javax.validation.constraints.Email;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Size;
+
 @Component
 public class Becas {
+	@Min(value=1,message="El codigo debe ser mayor o igual a 1")
 	private int codigo;
+	
 	private Curso curso;
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private LocalDate fechaApertura;
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private LocalDate fechaCierre;
+	//@NotBlank(message="El estado no puede ser blanco")
 	private String estado;
 	
 	public Becas() {

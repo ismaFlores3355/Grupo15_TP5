@@ -2,16 +2,40 @@ package ar.edu.unju.fi.model;
 
 import java.time.LocalDate;
 
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Size;
+
+import org.springframework.format.annotation.DateTimeFormat;
+
 
 
 public class Curso {
+	
+	//@Min(value=1,message="El codigo debe ser mayor o igual a 1")
 	private int codigo;
+	
+	@NotBlank(message="El titulo no puede ser blanco")
 	private String titulo;
+	
+	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private LocalDate fechaInicio;
+	
+	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private LocalDate fechaFin;
+	
+	@Min(value=1, message="las horas deben ser mayores a 1")
 	private int horas;
+	
+	@NotBlank(message="La modalidad no puede ser blanco")
 	private String modalidad;
+	
+	
 	private Docente docente;
+	
+	
+	@NotEmpty(message="la categoria no puede ser vacio")
 	private String categoria;
 	//profe
 	public Curso() {

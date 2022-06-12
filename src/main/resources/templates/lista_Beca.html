@@ -13,9 +13,9 @@
 	<header th:replace="/layouts/header::header"></header>
 		<h3 class="text-info">Listado de Becas</h3>
 		<section class="d-flex justify-content-center">
-		<div class="card col-sm-8 p-4">
+		<div class="card col-sm-8 p-4 margen-index">
 			<div class="d-md-flex justify-content-md-end">
-			   <a th:href="@{/Beca/nuevo}" id="nuevo" class="btn btn-primary">Nuevo</a>
+			   <a th:href="@{/beca/nuevo}" id="nuevo" class="btn btn-primary">Nuevo</a>
 			</div>
 
 	      <div class="container">
@@ -36,8 +36,8 @@
         				<td th:text="${beca.fechaApertura}"></td>
         				<td th:text="${beca.fechaCierre}"></td>
         				<td >
-        				<a href="#" id="editarBeca" class="btn btn-success">Editar</a>
-        				<a href="#" id="eliminarBeca" class="btn btn-danger">Eliminar</a>
+        				<a th:href="@{/beca/editar/}+${beca.codigo}" id="editarBeca" class="btn btn-warning">Editar</a>
+							<a th:href="@{/beca/eliminar/}+${beca.codigo}" id="eliminarBeca" class="btn btn-danger">Eliminar</a>
         				</td>
         			</tr>
         		</tbody>	

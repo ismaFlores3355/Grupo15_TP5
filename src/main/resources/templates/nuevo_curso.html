@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
+<link rel="stylesheet" type="text/css"
+	th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" />
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agregar Curso</title>
+</head>
+<body>
+	<header th:replace="/layouts/header::header"></header>
+	<section class="d-flex justify-content-center">
+		<div class="card col-sm-4 p-4 margen-index">
+			<div class="mb-4">
+				<h3 class="text-primary">Alta de Curso</h3>
+			</div>
+			<div class="mb-3 ">
+			
+			
+				<form th:action="@{/curso/guardar}" method="POST" th:object="${curso}">
+                    <div class="col-md-10">
+						<label for="inputCodigo">Codigo</label> <input th:field="*{codigo}" type="number"
+							class="form-control" id="inputcodigo" placeholder="Ingrese codigo">
+						<div class="text-danger" th:if="${#fields.hasErrors('codigo')}" th:errors="*{codigo}"></div>	
+					</div>
+					
+					
+					<div class="col-md-10">
+						<label for="inputAddress">Titulo</label> <input th:field="*{titulo}" type="text"
+							class="form-control" id="inputTitulo"
+							placeholder="Ingrese titulo">
+							<div class="text-danger" th:if="${#fields.hasErrors('titulo')}" th:errors="*{titulo}"></div>
+					</div>
+					
+					<div class="col-md-10">
+						<label for="inputNombre">Fecha Apertura</label> <input th:field="*{fechaInicio}" th:value="*{fechaInicio}"type="date"
+							class="form-control" id="inputfechaInicio" placeholder="Ingrese Fecha Apertura">
+							<div class="text-danger" th:if="${#fields.hasErrors('fechaInicio')}" th:errors="*{fechaInicio}"></div>
+					</div>
+					
+					<div class="col-md-10">
+						<label for="inputEmail">Fecha Cierre</label> <input th:field="*{fechaFin}" th:value="*{fechaFin}" type="date"
+							class="form-control" id="inputFechaCiere"
+							placeholder="Ingrese Fecha Cierre">
+							<div class="text-danger" th:if="${#fields.hasErrors('fechaFin')}" th:errors="*{fechaFin}"></div>
+					</div>
+					
+					<div class="col-md-10">
+						<label for="inputhoras">Horas</label> <input th:field="*{horas}" type="number"
+							class="form-control" id="inputhoras" placeholder="Ingrese cantidad de horas">
+						<div class="text-danger" th:if="${#fields.hasErrors('horas')}" th:errors="*{horas}"></div>	
+					</div>
+					
+					<div class="col-md-10">
+						<label for="inputmodalidad">Modalidad</label> <input th:field="*{modalidad}" type="text"
+							class="form-control" id="inputmodalidad"
+							placeholder="Ingrese modalidad">
+							<div class="text-danger" th:if="${#fields.hasErrors('modalidad')}" th:errors="*{modalidad}"></div>
+					</div>
+					
+					
+					
+					<div class="col-md-10">
+						<label for="inputdocentenombre">Docente</label> <input th:field="*{docente.nombre}" type="text"
+							class="form-control" id="inputdocentenombre" placeholder="Ingrese nombre del docente">
+							<div class="text-danger" th:if="${#fields.hasErrors('docente.nombre')}" th:errors="*{docente.nombre}"></div> 
+					</div>
+					<div class="col-md-10">
+						<label for="inputdocenteapellido">Docente</label> <input th:field="*{docente.apellido}" type="text"
+							class="form-control" id="inputdocenteapellido" placeholder="Ingrese apellido del docente">
+							<div class="text-danger" th:if="${#fields.hasErrors('docente.apellido')}" th:errors="*{docente.apellido}"></div> 
+					</div>
+					
+					<div class="col-md-10">
+						<label for="inputcategoria">Categoria</label> <input th:field="*{categoria}" type="text"
+							class="form-control" id="inputcategoria"
+							placeholder="Ingrese categoria">
+							<div class="text-danger" th:if="${#fields.hasErrors('categoria')}" th:errors="*{categoria}"></div>
+					</div>
+					<br>
+					<div class="d-grid gap-2 d-md-flex justify-content-md-start">
+						<button class="btn btn-success" type="submit">Enviar</button>
+						<a th:href="@{/inicio}" id="cancel" class="btn btn-danger">Cancelar</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</section>
+	<br/>
+	<footer th:replace="/layouts/footer::footer"></footer>
+	<script src="/webjars/jquery/jquery.min.js" type="text/javascript"></script>
+	<script src="/webjars/popper.js/umd/popper.min.js"
+		type="text/javascript"></script>
+	<script src="/webjars/bootstrap/js/bootstrap.min.js"
+		type="text/javascript"></script>
+</body>
+</html>
