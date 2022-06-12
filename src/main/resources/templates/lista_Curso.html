@@ -13,9 +13,9 @@
 	<header th:replace="/layouts/header::header"></header>
 		<h3 class="text-info">Lista Cursos</h3>
 		<section class="d-flex justify-content-center">
-		<div class="card col-sm-8 p-4">
+		<div class="card col-sm-8 p-4 margen-index">
 			<div class="d-md-flex justify-content-md-end">
-			   <a th:href="" id="nuevo" class="btn btn-primary">Nuevo</a>
+			   <a th:href="@{/curso/nuevo}" id="nuevo" class="btn btn-primary">Nuevo</a>
 			</div>
 
 	      <div class="container">
@@ -34,19 +34,21 @@
         			</tr>
         		</thead>
         		<tbody>
-        			<tr th:each="">
-        				<td th:text=""></td>
-        				<td th:text=""></td>
-        				<td th:text=""></td>
-        				<td th:text=""></td>
-        				<td th:text=""></td>
-        				<td th:text=""></td>
-        				<td th:text=""></td>
-        				<td th:text=""></td>
-        				<td >
-        				<a href="#" id="editarAlumno" class="btn btn-success">Editar</a>
-        				<a href="#" id="eliminarAlumno" class="btn btn-danger">Eliminar</a>
-        				</td>
+        			<tr th:each="curso: ${cursos}">
+        				<td th:text="${curso.codigo}"></td>
+        				<td th:text="${curso.titulo}"></td>
+        				<td th:text="${curso.fechaInicio}"></td>
+        				<td th:text="${curso.fechaFin}"></td>
+        				<td th:text="${curso.horas}"></td>
+        				<td th:text="${curso.modalidad}"></td>
+        				<td th:text="${curso.docente.nombre}"></td>
+        				<td th:text="${curso.categoria}"></td>
+        				<td>
+							<a th:href="@{/curso/editar/}+${curso.codigo}" id="editarCurso" class="btn btn-warning">Editar</a>
+							<a th:href="@{/curso/eliminar/}+${curso.codigo}" id="eliminarCurso" class="btn btn-danger">Eliminar</a>
+							
+							
+							</td>
         			</tr>
         		</tbody>	
         	</table>

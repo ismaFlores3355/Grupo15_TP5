@@ -3,10 +3,12 @@ package ar.edu.unju.fi.util;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
+import org.springframework.stereotype.Component;
+
 import ar.edu.unju.fi.model.Becas;
 import ar.edu.unju.fi.model.Curso;
 import ar.edu.unju.fi.model.Docente;
-
+@Component
 public class ListaBeca {
 
 	private ArrayList<Becas> becas;
